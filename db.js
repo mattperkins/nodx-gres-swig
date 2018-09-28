@@ -39,7 +39,7 @@ const getProduct = (id, cb) => {
    return cb(err)
   }
   if(result.rows.length === 0){
-   return cb('No record for that id')
+   return cb(new Error('No record for that id'))
   }
   cb(null, result.rows[0])
  })
