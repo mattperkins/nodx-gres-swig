@@ -8,7 +8,7 @@
     "start:dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "mattperkins <github@mattperkins.com>",
+  "author": "DORMshed",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
