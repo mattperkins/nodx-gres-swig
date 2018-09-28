@@ -5,5 +5,14 @@ db.connect()
 
 const app = express()
 
+app.get('/', (req,res,next) =>{
+ db.getProducts((err, products)=>{
+  if(err){
+   return next(err)
+  }
+  res.send(products)
+ })
+})
+
 const port = process.env.PORT || 3000
 app.listen(port, () => console.log( `Listening on port: ${port}`) )

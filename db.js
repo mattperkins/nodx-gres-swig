@@ -32,4 +32,13 @@ const connect = () => {
  })
 }
 
-module.exports = { connect }
+const getProducts = (cb) => {
+ client.query('select * from products;', (err, result) => {
+  if(err){
+   return cb(err)
+  }
+  cb(null, result.rows)
+ })
+}
+
+module.exports = { connect, getProducts }
