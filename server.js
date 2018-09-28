@@ -14,5 +14,9 @@ app.get('/', (req,res,next) =>{
  })
 })
 
+app.use((err, req, res, next)=> {
+ res.send(err.message)
+})
+
 const port = process.env.PORT || 3000
 app.listen(port, () => console.log( `Listening on port: ${port}`) )
