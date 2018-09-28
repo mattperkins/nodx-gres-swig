@@ -28,7 +28,8 @@ const connect = () => {
     console.log('Seed DB')
      seed()
    }
-  }
+  } 
+  console.log('Error: ' + err)
  })
 }
 
