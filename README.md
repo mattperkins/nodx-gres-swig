@@ -1,3 +1,5 @@
+#### Todo: render db data to EJS template
+
 # INSTALL 
 ## yarn 
 

@@ -2,16 +2,20 @@ const express = require('express')
 const db = require('./db')
 
 db.connect()
-
 const app = express()
+
+// Templates
+app.set('view engine', 'ejs')
 
 // Routes
 app.get('/', (req,res,next) =>{
+ 
  db.getProducts((err, products)=>{
   if(err){
    return next(err)
   }
-  res.send(products)
+  // res.send(products)
+  res.render('products', res.json({products}))
  })
 })
 
