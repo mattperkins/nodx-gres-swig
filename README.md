@@ -1,5 +1,8 @@
 #### Todo: render db data to EJS template
 
+### DB_URL=postgres://localhost/dirName
+### SEED=true
+
 # INSTALL 
 ## yarn 
 
